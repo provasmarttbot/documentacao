@@ -212,6 +212,7 @@ Criando usuário, base de dados e definindo permissões:
        MariaDB > GRANT ALL PRIVILEGES ON wordpress.* TO wordpressuser@localhost IDENTIFIED BY 'wu8Aeph9sah3Yee9';
 
 `# cp wp-config-sample.php wp-config.php`
+
 `# vi wp-config.php`
 
 configuração do arquivo `wp-config.php`, segue abaixo o *print*.
@@ -229,6 +230,7 @@ configuração do arquivo `wp-config.php`, segue abaixo o *print*.
        define('DB_HOST', 'localhost');
 	   
 Start no Nginx:
+
 `Service nginx start`
 
 ### Configurando o Wordpress:
