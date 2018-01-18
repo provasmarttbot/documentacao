@@ -143,7 +143,7 @@ Postfix instalado do repositório padrão do [CentOS](https://www.centos.org).
 
 `# yum install postfix`
 
-#### Criando certificado SSL
+#### Criando certificado SSL:
 
 ***OBS**: Postfix instalado para somente enviar e-mail.*
 
@@ -167,6 +167,7 @@ Segue abaixo *print* do arquivo `main.cf` e as configurações utilizadas no Pos
        biff = no
        append_dot_mydomain = no
        readme_directory = no
+	   
        smtp_tls_cert_file = /etc/postfix/ssl/smarttbot.cert
        smtp_tls_key_file = /etc/postfix/ssl/smarttbot.key
        smtp_use_tls=yes
@@ -174,13 +175,15 @@ Segue abaixo *print* do arquivo `main.cf` e as configurações utilizadas no Pos
        smtp_tls_security_level = may
        smtp_tls_mandatory_protocols = !TLSv1, !TLSv1.1
        smtp_tls_mandatory_ciphers = high
-       inet_interfaces = loopback-only
-       #inet_interfaces = localhost, 104.237.128.155
+       
+	   inet_interfaces = loopback-only
        local_transport = error:local delivery is disabled
        mynetworks_style = host
-       alias_maps = hash:/etc/aliases
+       
+	   alias_maps = hash:/etc/aliases
        alias_database = hash:/etc/aliases
-       relayhost =
+       
+	   relayhost =
        mailbox_size_limit = 0
        recipient_delimiter =
        inet_protocols = ipv4
@@ -224,8 +227,9 @@ configuração do arquivo `wp-config.php`, segue abaixo o *print*.
        define('DB_PASSWORD', 'wu8Aeph9sah3Yee9');
        /** MySQL hostname */
        define('DB_HOST', 'localhost');
-       Start no Nginx:
-       Service nginx start
+	   
+Start no Nginx:
+`Service nginx start`
 
 ### Configurando o Wordpress:
 
